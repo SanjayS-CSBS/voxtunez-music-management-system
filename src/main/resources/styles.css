@@ -1,0 +1,505 @@
+/* ==========================================================
+   VoxTune - Desktop Music Player
+   "Midnight Glass" Theme
+   Deep ambient gradient backdrop + frosted glass panels
+   with champagne-gold accents.
+   ========================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 13px;
+
+    /* Ambient backdrop: three soft glows floating over a deep gradient */
+    -fx-background-color:
+        radial-gradient(center 15% -10%, radius 85%, rgba(88,124,232,0.30) 0%, rgba(88,124,232,0.0) 60%),
+        radial-gradient(center 88% 6%, radius 75%, rgba(178,112,255,0.20) 0%, rgba(178,112,255,0.0) 58%),
+        radial-gradient(center 62% 108%, radius 90%, rgba(214,176,110,0.16) 0%, rgba(214,176,110,0.0) 62%),
+        linear-gradient(to bottom right, #0A0E17, #101725 48%, #0A0F18);
+}
+
+/* Global fallback text color so unstyled labels stay readable on dark */
+.label {
+    -fx-text-fill: #E9EEF7;
+}
+
+.tooltip {
+    -fx-background-color: rgba(18,24,36,0.96);
+    -fx-background-radius: 8;
+    -fx-text-fill: #E7ECF5;
+    -fx-font-size: 12px;
+    -fx-padding: 6 10;
+}
+
+/* ==========================================================
+   Sidebar
+   ========================================================== */
+.sidebar {
+    -fx-background-color: rgba(255,255,255,0.028);
+    -fx-border-color: transparent rgba(255,255,255,0.07) transparent transparent;
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 26 16 20 16;
+}
+
+.brand-row {
+    -fx-padding: 0 0 8 4;
+}
+
+.brand-emblem {
+    -fx-background-color: linear-gradient(to bottom right, #EAD197, #C0904A);
+    -fx-background-radius: 12;
+    -fx-text-fill: #1A1206;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-min-width: 42; -fx-min-height: 42;
+    -fx-pref-width: 42; -fx-pref-height: 42;
+    -fx-max-width: 42;  -fx-max-height: 42;
+    -fx-effect: dropshadow(gaussian, rgba(212,175,110,0.45), 18, 0.25, 0, 6);
+}
+
+.brand-title {
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F4F7FC;
+}
+
+.brand-subtitle {
+    -fx-font-size: 10.5px;
+    -fx-text-fill: #7C8798;
+}
+
+.nav-section-label {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6B7686;
+    -fx-padding: 8 0 4 6;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #AEB8C8;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 14;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-text-fill: #F4F7FC;
+}
+
+.nav-button.active {
+    -fx-background-color: linear-gradient(to right, rgba(212,175,110,0.22), rgba(212,175,110,0.03));
+    -fx-text-fill: #F2E2B8;
+    -fx-font-weight: bold;
+}
+
+.status-pill {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-border-color: rgba(255,255,255,0.10);
+    -fx-border-radius: 50;
+    -fx-background-radius: 50;
+    -fx-text-fill: #9AA6B8;
+    -fx-font-size: 11px;
+    -fx-padding: 6 12;
+}
+
+/* ==========================================================
+   Main content area (transparent so the ambient glow shows)
+   ========================================================== */
+.main-content {
+    -fx-background-color: transparent;
+    -fx-padding: 22 26 10 26;
+}
+
+.top-bar {
+    -fx-padding: 0 0 2 0;
+}
+
+.dashboard-heading {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F6F8FC;
+}
+
+.section-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #EDF1F8;
+}
+
+/* ==========================================================
+   Frosted glass cards
+   ========================================================== */
+.commander-card,
+.table-card {
+    -fx-background-color: linear-gradient(to bottom, rgba(255,255,255,0.080), rgba(255,255,255,0.026));
+    -fx-background-radius: 18;
+    -fx-border-color: rgba(255,255,255,0.11);
+    -fx-border-radius: 18;
+    -fx-border-width: 1;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 26, 0.16, 0, 12);
+}
+
+.table-card {
+    -fx-padding: 16 16 10 16;
+}
+
+.card-heading {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F1F5FB;
+}
+
+.card-subtext {
+    -fx-font-size: 12px;
+    -fx-text-fill: #93A0B3;
+}
+
+.field-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #93A0B3;
+}
+
+/* ==========================================================
+   Inputs
+   ========================================================== */
+.command-input {
+    -fx-background-color: rgba(8,12,20,0.55);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255,255,255,0.12);
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 9 13;
+    -fx-font-size: 13px;
+    -fx-text-fill: #F2F5FA;
+    -fx-prompt-text-fill: #6E7A8C;
+    -fx-highlight-fill: rgba(212,175,110,0.55);
+    -fx-highlight-text-fill: #12161E;
+}
+
+.command-input:focused {
+    -fx-border-color: rgba(212,175,110,0.80);
+    -fx-background-color: rgba(8,12,20,0.72);
+    -fx-effect: dropshadow(gaussian, rgba(212,175,110,0.30), 14, 0.2, 0, 0);
+}
+
+/* ==========================================================
+   Buttons
+   ========================================================== */
+.add-button,
+.scan-button,
+.execute-button,
+.player-btn-main {
+    -fx-background-color: linear-gradient(to bottom, #E8CF95, #C79A4E);
+    -fx-text-fill: #1A1206;
+    -fx-font-weight: bold;
+    -fx-padding: 9 18;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(212,175,110,0.38), 16, 0.2, 0, 5);
+}
+
+.add-button:hover,
+.scan-button:hover,
+.execute-button:hover,
+.player-btn-main:hover {
+    -fx-background-color: linear-gradient(to bottom, #F0DBA8, #D2A659);
+}
+
+.add-button:pressed,
+.scan-button:pressed,
+.execute-button:pressed,
+.player-btn-main:pressed {
+    -fx-background-color: linear-gradient(to bottom, #C79A4E, #B0843D);
+    -fx-effect: dropshadow(gaussian, rgba(212,175,110,0.20), 8, 0.2, 0, 2);
+}
+
+.voice-button,
+.player-btn,
+.ghost-button {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-text-fill: #E7ECF5;
+    -fx-font-weight: bold;
+    -fx-padding: 9 18;
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255,255,255,0.13);
+    -fx-border-radius: 12;
+    -fx-cursor: hand;
+}
+
+.voice-button:hover,
+.player-btn:hover,
+.ghost-button:hover {
+    -fx-background-color: rgba(255,255,255,0.13);
+}
+
+.voice-button.listening {
+    -fx-background-color: linear-gradient(to bottom, #F2917A, #D5563A);
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: rgba(255,160,140,0.6);
+    -fx-effect: dropshadow(gaussian, rgba(213,86,58,0.55), 18, 0.25, 0, 0);
+}
+
+.status-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #8E9BAE;
+}
+
+/* ==========================================================
+   Assistant feedback card
+   ========================================================== */
+.assistant-card {
+    -fx-background-color: rgba(255,255,255,0.045);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255,255,255,0.10) rgba(255,255,255,0.10) rgba(255,255,255,0.10) rgba(212,175,110,0.90);
+    -fx-border-width: 1 1 1 3;
+    -fx-border-radius: 12;
+    -fx-padding: 10 14;
+}
+
+.assistant-header {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D9B877;
+}
+
+.assistant-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #E4EAF3;
+}
+
+/* ==========================================================
+   Song table
+   ========================================================== */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.09) transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-size: 38;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #8593A8;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.045) transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-cell-size: 46;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(255,255,255,0.012);
+}
+
+.table-row-cell:hover {
+    -fx-background-color: rgba(255,255,255,0.055);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(212,175,110,0.16);
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #FBEFD2;
+}
+
+.table-cell {
+    -fx-text-fill: #D5DCE8;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 10;
+    -fx-border-color: transparent;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #6E7A8C;
+}
+
+/* Cell action buttons */
+.cell-play-btn {
+    -fx-background-color: rgba(212,175,110,0.16);
+    -fx-text-fill: #F0DFB4;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(212,175,110,0.35);
+    -fx-border-radius: 8;
+    -fx-padding: 4 12;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.cell-play-btn:hover {
+    -fx-background-color: rgba(212,175,110,0.30);
+    -fx-text-fill: #FFF4DC;
+}
+
+.cell-fav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8E9BAE;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-padding: 3 10;
+    -fx-background-radius: 8;
+}
+
+.cell-fav-btn:hover {
+    -fx-text-fill: #E9C46A;
+    -fx-background-color: rgba(233,196,106,0.12);
+}
+
+.cell-fav-btn.favorited {
+    -fx-text-fill: #E9C46A;
+}
+
+/* Player-bar favorite star for the current track */
+.fav-star {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-border-color: rgba(255,255,255,0.13);
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-text-fill: #C7D0DE;
+    -fx-font-size: 16px;
+    -fx-padding: 5 12;
+    -fx-cursor: hand;
+}
+
+.fav-star:hover {
+    -fx-background-color: rgba(255,255,255,0.13);
+    -fx-text-fill: #E9C46A;
+}
+
+.fav-star.favorited {
+    -fx-text-fill: #E9C46A;
+    -fx-border-color: rgba(233,196,106,0.55);
+    -fx-background-color: rgba(233,196,106,0.12);
+}
+
+.fav-star:disabled {
+    -fx-opacity: 0.4;
+}
+
+/* ==========================================================
+   Bottom player bar
+   ========================================================== */
+.player-bar {
+    -fx-background-color: linear-gradient(to bottom, rgba(255,255,255,0.065), rgba(255,255,255,0.018));
+    -fx-border-color: rgba(255,255,255,0.09) transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 14 26;
+}
+
+.album-art {
+    -fx-background-color: linear-gradient(to bottom right, rgba(212,175,110,0.40), rgba(122,92,220,0.30));
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255,255,255,0.16);
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.40), 14, 0.2, 0, 4);
+}
+
+.now-playing-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F4F7FC;
+}
+
+.now-playing-artist {
+    -fx-font-size: 11px;
+    -fx-text-fill: #93A0B3;
+}
+
+.time-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #93A0B3;
+}
+
+/* ==========================================================
+   Sliders
+   ========================================================== */
+.slider .track {
+    -fx-background-color: rgba(255,255,255,0.14);
+    -fx-background-radius: 4;
+    -fx-pref-height: 4;
+}
+
+.slider .thumb {
+    -fx-background-color: linear-gradient(to bottom, #EAD197, #C79A4E);
+    -fx-background-radius: 50%;
+    -fx-effect: dropshadow(gaussian, rgba(212,175,110,0.55), 10, 0.3, 0, 0);
+}
+
+.slider .thumb:hover {
+    -fx-background-color: linear-gradient(to bottom, #F4E0AE, #D2A659);
+}
+
+.slider:focused .thumb {
+    -fx-effect: dropshadow(gaussian, rgba(212,175,110,0.80), 14, 0.35, 0, 0);
+}
+
+/* ==========================================================
+   Scrollbars
+   ========================================================== */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .track,
+.scroll-bar .track-background {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(255,255,255,0.18);
+    -fx-background-radius: 6;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: rgba(255,255,255,0.32);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}

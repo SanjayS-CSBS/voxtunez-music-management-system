@@ -1,0 +1,43 @@
+# Maven build output
+target/
+
+# Compiled Java files
+*.class
+
+# Java packaged files
+*.jar
+*.war
+*.ear
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables / secrets
+.env
+
+# ZIP archives
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local speech recognition model
+models/vosk-model-en-us-0.22-lgraph/
+# GitHub-generated tooling
+.github/
